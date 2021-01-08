@@ -1,0 +1,3 @@
+BFS: A L
+DFS: A L
+AStar: S E

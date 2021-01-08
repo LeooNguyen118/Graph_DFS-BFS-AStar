@@ -1,0 +1,50 @@
+AStar Step By Step
+
+------ Step 1
+Open = {'S'}
+Closed = set()
+- S: 0 
+-> Chon S
+Neighbor: A -> Add vao Open
+Neighbor: B -> Add vao Open
+
+------ Step 2
+Open = {'B', 'A'}
+Closed = {'S'}
+- B: 8 
+- A: 6 
+-> Chon A
+Neighbor: X -> Add vao Open
+Neighbor: Y -> Add vao Open
+
+------ Step 3
+Open = {'X', 'B', 'Y'}
+Closed = {'S', 'A'}
+- X: 13 
+- B: 8 
+- Y: 12 
+-> Chon B
+Neighbor: C -> Add vao Open
+Neighbor: D -> Add vao Open
+
+------ Step 4
+Open = {'Y', 'D', 'X', 'C'}
+Closed = {'B', 'S', 'A'}
+- Y: 12 
+- D: 18 
+- X: 13 
+- C: 13 
+-> Chon Y
+Neighbor: E -> Add vao Open
+
+------ Step 5
+Open = {'E', 'D', 'X', 'C'}
+Closed = {'Y', 'B', 'S', 'A'}
+- E: 7 
+- D: 18 
+- X: 13 
+- C: 13 
+-> Chon E
+! Tim thay duong di !
+
+Path: ['S', 'A', 'Y', 'E']

@@ -1,0 +1,75 @@
+DFS Step By Step
+
+------ Step 1
+Path: ['A']
+
+Xet Node: A
+Next Node: ['B', 'C', 'D']
+Stack: []
+
+- Xet node: B
+-> Add vao stack duong di toi B: ['A', 'B'] 
+- Xet node: C
+-> Add vao stack duong di toi C: ['A', 'C'] 
+- Xet node: D
+-> Add vao stack duong di toi D: ['A', 'D'] 
+
+------ Step 2
+Path: ['A', 'D']
+
+Xet Node: D
+Next Node: ['G', 'H', 'I']
+Stack: [('B', ['A', 'B']), ('C', ['A', 'C'])]
+
+- Xet node: G
+-> Add vao stack duong di toi G: ['A', 'D', 'G'] 
+- Xet node: H
+-> Add vao stack duong di toi H: ['A', 'D', 'H'] 
+- Xet node: I
+-> Add vao stack duong di toi I: ['A', 'D', 'I'] 
+
+------ Step 3
+Path: ['A', 'D', 'I']
+
+Xet Node: I
+Next Node: ['N']
+Stack: [('B', ['A', 'B']), ('C', ['A', 'C']), ('G', ['A', 'D', 'G']), ('H', ['A', 'D', 'H'])]
+
+- Xet node: N
+-> Add vao stack duong di toi N: ['A', 'D', 'I', 'N'] 
+
+------ Step 4
+Path: ['A', 'D', 'I', 'N']
+
+Xet Node: N
+Next Node: []
+Stack: [('B', ['A', 'B']), ('C', ['A', 'C']), ('G', ['A', 'D', 'G']), ('H', ['A', 'D', 'H'])]
+
+
+------ Step 5
+Path: ['A', 'D', 'H']
+
+Xet Node: H
+Next Node: ['L', 'M']
+Stack: [('B', ['A', 'B']), ('C', ['A', 'C']), ('G', ['A', 'D', 'G'])]
+
+- Xet node: L
+-> Add vao stack duong di toi L: ['A', 'D', 'H', 'L'] 
+- Xet node: M
+-> Add vao stack duong di toi M: ['A', 'D', 'H', 'M'] 
+
+------ Step 6
+Path: ['A', 'D', 'H', 'M']
+
+Xet Node: M
+Next Node: []
+Stack: [('B', ['A', 'B']), ('C', ['A', 'C']), ('G', ['A', 'D', 'G']), ('L', ['A', 'D', 'H', 'L'])]
+
+
+------ Step 7
+Path: ['A', 'D', 'H', 'L']
+
+Xet Node: L
+-> Tim thay end! Xuat ra duong di tu A den L
+
+Path:  ['A', 'D', 'H', 'L']

@@ -1,0 +1,123 @@
+BFS Step By Step
+
+------ Step 1
+Path: ['A']
+
+Xet Node: A
+Next Node: ['B', 'C', 'D']
+Queue: []
+
+- Xet node: B
+-> Add vao queue duong di toi B: ['A', 'B'] 
+- Xet node: C
+-> Add vao queue duong di toi C: ['A', 'C'] 
+- Xet node: D
+-> Add vao queue duong di toi D: ['A', 'D'] 
+
+------ Step 2
+Path: ['A', 'B']
+
+Xet Node: B
+Next Node: ['E', 'F']
+Queue: [('C', ['A', 'C']), ('D', ['A', 'D'])]
+
+- Xet node: E
+-> Add vao queue duong di toi E: ['A', 'B', 'E'] 
+- Xet node: F
+-> Add vao queue duong di toi F: ['A', 'B', 'F'] 
+
+------ Step 3
+Path: ['A', 'C']
+
+Xet Node: C
+Next Node: []
+Queue: [('D', ['A', 'D']), ('E', ['A', 'B', 'E']), ('F', ['A', 'B', 'F'])]
+
+
+------ Step 4
+Path: ['A', 'D']
+
+Xet Node: D
+Next Node: ['G', 'H', 'I']
+Queue: [('E', ['A', 'B', 'E']), ('F', ['A', 'B', 'F'])]
+
+- Xet node: G
+-> Add vao queue duong di toi G: ['A', 'D', 'G'] 
+- Xet node: H
+-> Add vao queue duong di toi H: ['A', 'D', 'H'] 
+- Xet node: I
+-> Add vao queue duong di toi I: ['A', 'D', 'I'] 
+
+------ Step 5
+Path: ['A', 'B', 'E']
+
+Xet Node: E
+Next Node: []
+Queue: [('F', ['A', 'B', 'F']), ('G', ['A', 'D', 'G']), ('H', ['A', 'D', 'H']), ('I', ['A', 'D', 'I'])]
+
+
+------ Step 6
+Path: ['A', 'B', 'F']
+
+Xet Node: F
+Next Node: ['J', 'K']
+Queue: [('G', ['A', 'D', 'G']), ('H', ['A', 'D', 'H']), ('I', ['A', 'D', 'I'])]
+
+- Xet node: J
+-> Add vao queue duong di toi J: ['A', 'B', 'F', 'J'] 
+- Xet node: K
+-> Add vao queue duong di toi K: ['A', 'B', 'F', 'K'] 
+
+------ Step 7
+Path: ['A', 'D', 'G']
+
+Xet Node: G
+Next Node: []
+Queue: [('H', ['A', 'D', 'H']), ('I', ['A', 'D', 'I']), ('J', ['A', 'B', 'F', 'J']), ('K', ['A', 'B', 'F', 'K'])]
+
+
+------ Step 8
+Path: ['A', 'D', 'H']
+
+Xet Node: H
+Next Node: ['L', 'M']
+Queue: [('I', ['A', 'D', 'I']), ('J', ['A', 'B', 'F', 'J']), ('K', ['A', 'B', 'F', 'K'])]
+
+- Xet node: L
+-> Add vao queue duong di toi L: ['A', 'D', 'H', 'L'] 
+- Xet node: M
+-> Add vao queue duong di toi M: ['A', 'D', 'H', 'M'] 
+
+------ Step 9
+Path: ['A', 'D', 'I']
+
+Xet Node: I
+Next Node: ['N']
+Queue: [('J', ['A', 'B', 'F', 'J']), ('K', ['A', 'B', 'F', 'K']), ('L', ['A', 'D', 'H', 'L']), ('M', ['A', 'D', 'H', 'M'])]
+
+- Xet node: N
+-> Add vao queue duong di toi N: ['A', 'D', 'I', 'N'] 
+
+------ Step 10
+Path: ['A', 'B', 'F', 'J']
+
+Xet Node: J
+Next Node: []
+Queue: [('K', ['A', 'B', 'F', 'K']), ('L', ['A', 'D', 'H', 'L']), ('M', ['A', 'D', 'H', 'M']), ('N', ['A', 'D', 'I', 'N'])]
+
+
+------ Step 11
+Path: ['A', 'B', 'F', 'K']
+
+Xet Node: K
+Next Node: []
+Queue: [('L', ['A', 'D', 'H', 'L']), ('M', ['A', 'D', 'H', 'M']), ('N', ['A', 'D', 'I', 'N'])]
+
+
+------ Step 12
+Path: ['A', 'D', 'H', 'L']
+
+Xet Node: L
+-> Tim thay end! Xuat ra duong di tu A den L
+
+Path:  ['A', 'D', 'H', 'L']
